@@ -1,5 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+session_start();
+
+include('conf/config.php');
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nama = $_POST['fullName'];
+    $alamat = $_POST['alamat'];
+    $no_ktp = $_POST['no_ktp'];
+    $no_hp = $_POST['no_hp'];
+
+    // Memeriksa apakah pasien sudah terdaftar berdasarkan nomor KTP
+    $check_query = "SELECT * FROM pasien WHERE no_ktp = '$no_ktp'";
+    $result = $koneksi->query($check_query);
+
+    if ($result->num_rows > 0) {
+        // Pasien sudah terdaftar
+        echo "Pasien sudah terdaftar dalam database.";
+    } else {
+        // Pasien belum terdaftar, membuat nomor rekam medis
+        $tahun_bulan = date("Ym");
+        
+        // Menghitung jumlah pasien pada bulan ini
+        $count_query = "SELECT COUNT(*) as total FROM pasien WHERE DATE_FORMAT(tanggal_daftar, '%Y%m') = '$tahun_bulan'";
+        $count_result = $koneksi->query($count_query);
+        $count_row = $count_result->fetch_assoc();
+        $urutan_pasien = $count_row['total'] + 1;
+
+        // Membuat nomor rekam medis
+        $no_rm = $tahun_bulan . "-" . sprintf('%03d', $urutan_pasien);
+
+        // Menyimpan data pasien ke database
+        $insert_query = "INSERT INTO pasien (nama, alamat, no_ktp, no_hp, no_rm, tanggal_daftar) 
+                        VALUES ('$nama', '$alamat', '$no_ktp', '$no_hp', '$no_rm', NOW())";
+        
+        if ($koneksi->query($insert_query) === TRUE) {
+            echo "Registrasi berhasil. Nomor Rekam Medis: " . $no_rm;
+        } else {
+            echo "Error: " . $insert_query . "<br>" . $koneksi->error;
+        }
+    }
+    
+}
+?>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,33 +71,40 @@
     <div class="card-body">
       <p class="login-box-msg">Register</p>
 
-      <form action="conf/autentikasi.php" method="post">
+      <form action="" method="post">
+        <!-- name -->
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Full Name" name="fullName">
+          <input type="text" class="form-control" required placeholder="Full Name" name="fullName">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fa-solid fa-user"></span>
             </div>
           </div>
         </div>
+
+        <!-- alamat -->
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Alamat" name="alamat">
+          <input type="text" class="form-control" required placeholder="Alamat" name="alamat">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fa-solid fa-location-pin"></span>
             </div>
           </div>
         </div>
+
+        <!-- No KTP -->
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="No. KTP" name="noKTP">
+          <input type="number" class="form-control" required placeholder="No. KTP" name="no_ktp">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fa-solid fa-id-badge"></span>
             </div>
           </div>
         </div>
+
+        <!-- No Hp -->
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="No. HP" name="noHp">
+          <input type="number" class="form-control" required placeholder="No. HP" name="no_hp">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fa-solid fa-phone"></span>
