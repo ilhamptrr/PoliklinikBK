@@ -12,8 +12,8 @@
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
+          
+          <!-- Dashboard -->
           <li class="nav-item">
             <a href="../app/dashboardAdmin.php" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
@@ -23,8 +23,10 @@
               </p>
             </a>
           </li>
+
+          <!-- Dokter -->
           <li class="nav-item">
-            <a href="../app/adminDokter.php" class="nav-link">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-solid fa-user-doctor"></i>
               <p>
                 Dokter
@@ -32,8 +34,10 @@
               </p>
             </a>
           </li>
+
+          <!-- Pasien -->
           <li class="nav-item">
-            <a href="../app/adminPasien.php" class="nav-link">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-solid fa-user-injured"></i>
               <p>
                 Pasien
@@ -41,8 +45,10 @@
               </p>
             </a>
           </li>
+
+          <!-- Poli -->
           <li class="nav-item">
-            <a href="../app/adminPoli.php" class="nav-link">              
+            <a href="#" class="nav-link">              
               <i class="nav-icon fas fa-hospital"></i>
               <p>
                 Poli
@@ -50,6 +56,8 @@
               </p>
             </a>
           </li>
+
+          <!-- Obat -->
           <li class="nav-item">
             <a href="../app/adminObat.php" class="nav-link">
               <i class="nav-icon fas fa-pills"></i>

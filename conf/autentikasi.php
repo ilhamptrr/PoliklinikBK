@@ -23,14 +23,5 @@
         exit();
     }
 
-    // Cek apakah pengguna adalah dokter
-    $queryPasien = mysqli_query($koneksi, "SELECT * FROM dokter WHERE username='$username' AND password='$password'");
-    if (mysqli_num_rows($queryPasien) == 1) {
-        header('location:../app/dashboardPasien.php');
-        $user = mysqli_fetch_array($queryPasien);
-        $_SESSION['nama'] = $user['nama'];
-        exit();
-    }
-
     header('location:../');
 ?>

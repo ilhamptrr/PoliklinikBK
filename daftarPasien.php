@@ -36,7 +36,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         VALUES ('$nama', '$alamat', '$no_ktp', '$no_hp', '$no_rm', NOW())";
         
         if ($koneksi->query($insert_query) === TRUE) {
-            echo "Registrasi berhasil. Nomor Rekam Medis: " . $no_rm;
+            echo "Registrasi berhasil.";
+            echo "<br>";
+            echo "Nomor Rekam Medis Anda: " . $no_rm;
         } else {
             echo "Error: " . $insert_query . "<br>" . $koneksi->error;
         }
@@ -48,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Login Pasien</title>
+  <title>Poliklinik BK</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -128,7 +130,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <!-- /.col -->
         </div>
 
-        <a href="daftarPoli.php" class="text-center">I already have an account</a>
+        <p>Silahkan Daftar Poli<a href="daftarPoli.php" class="text-center"> di sini.</a></p>
 
       </form>
 

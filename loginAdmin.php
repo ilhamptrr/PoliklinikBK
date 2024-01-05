@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Login Admin</title>
+  <title>Poliklinik BK</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -16,11 +16,20 @@
   <link rel="stylesheet" href="app/dist/css/adminlte.min.css">
 </head>
 <body class="hold-transition login-page">
+
+<?php
+    session_start();
+    if (isset($_SESSION['error'])) {
+        echo '<div class="alert alert-warning text-center" role="alert">' . $_SESSION['error'] . '</div>';
+        unset($_SESSION['error']); // hapus pesan kesalahan setelah ditampilkan
+    }
+?>
+
 <div class="login-box">
   <!-- /.login-logo -->
   <div class="card card-outline card-primary">
     <div class="card-header text-center">
-      <a href="../../index2.html" class="h1"><b>Poli</b>klinik</a>
+      <a href="#" class="h1"><b>Poli</b>klinik</a>
     </div>
     <div class="card-body">
       <p class="login-box-msg">Sign in</p>

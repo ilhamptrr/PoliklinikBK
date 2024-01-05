@@ -7,7 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Starter</title>
+  <title>Poliklinik BK</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -27,9 +27,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <span class="info-box-icon bg-info"><i class="fas fa-solid fa-user-injured"></i></span>
 
         <div class="info-box-content">
-          <span class="info-box-text"><b>Login sebagai Pasien</b></span>
-          <a href="loginPasien.php" class="text-decoration-none">Login here</a>
+          <span class="info-box-text"><b>Jika Anda seorang Pasien</b></span>
+          <a href="daftarPoli.php" class="text-decoration-none">Lanjut di sini</a>
         </div>
+
       </div>
     </div>
 
@@ -38,8 +39,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <span class="info-box-icon bg-info"><i class="fas fas fa-solid fa-user-doctor"></i></span>
 
         <div class="info-box-content">
-          <span class="info-box-text"><b>Login sebagai Dokter</b></span>
-          <a href="loginDokter.php" class="text-decoration-none">Login here</a>
+          <span class="info-box-text"><b>Jika Anda seorang Dokter</b></span>
+          <a href="loginDokter.php" class="text-decoration-none">Lanjut di sini</a>
         </div>
       </div>
     </div>
