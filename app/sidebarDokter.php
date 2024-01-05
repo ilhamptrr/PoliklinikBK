@@ -15,7 +15,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="../AdminLTE-3.2.0/dashboardDokter.php" class="nav-link">
+            <a href="../app/dashboardDokter.php" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Dashboard
@@ -24,7 +24,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="../AdminLTE-3.2.0/dokterJadwalPeriksa.php" class="nav-link">
+            <a href="../app/dokterJadwalPeriksa.php" class="nav-link">
               <i class="nav-icon fas fa-solid fa-clipboard-list"></i>
               <p>
                 Jadwal Periksa
@@ -33,7 +33,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="../AdminLTE-3.2.0/dokterPeriksaPasien.php" class="nav-link">
+            <a href="../app/dokterPeriksaPasien.php" class="nav-link">
               <i class="nav-icon fas fa-light fa-stethoscope"></i>
               <p>
                 Memeriksa Pasien
@@ -42,7 +42,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="../AdminLTE-3.2.0/dokterRiwayatPasien.php" class="nav-link">              
+            <a href="../app/dokterRiwayatPasien.php" class="nav-link">              
               <i class="nav-icon fas fa-solid fa-clipboard"></i>
               <p>
                 Riwayat Pasien
@@ -51,7 +51,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="../AdminLTE-3.2.0/dokterProfil.php" class="nav-link">
+            <a href="../app/dokterProfil.php" class="nav-link">
               <i class="nav-icon fas fa-solid fa-user"></i>
               <p>
                 Profil

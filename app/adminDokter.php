@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <?php
   session_start();
 ?>
-
-<?php include('../AdminLTE-3.2.0/template/header.php'); ?>
+<?php include('../app/template/header.php'); ?>
 
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 
   <!-- Preloader -->
-  <?php include('../AdminLTE-3.2.0/template/preloader.php'); ?>
+  <?php include('../app/template/preloader.php'); ?>
 
   <!-- Navbar -->
-  <?php include('../AdminLTE-3.2.0/template/navbar.php'); ?>
+  <?php include('../app/template/navbar.php'); ?>
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
@@ -37,12 +35,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Dashboard Admin</h1>
+            <h1 class="m-0">Tambah / Edit Dokter</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard v1</li>
+              <li class="breadcrumb-item active">Tambah / Edit Dokter</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -51,12 +49,40 @@
     <!-- /.content-header -->
 
     <!-- Main content -->
-    <?php include('../AdminLTE-3.2.0/template/mainContent.php'); ?>
+    <form>
+      <div class="card-body">
+        <div class="form-group">
+          <label for="namaDokter">Nama Dokter</label>
+          <input type="text" class="form-control" id="namaDokter" placeholder="Nama Dokter">
+        </div>
+        <div class="form-group">
+          <label for="alamat">Alamat</label>
+          <input type="text" class="form-control" id="alamat" placeholder="Alamat">
+        </div>
+        <div class="form-group">
+          <label for="no_hp">no_hp</label>
+          <input type="text" class="form-control" id="no_hp" placeholder="no_hp">
+        </div>
+        <div class="form-group">
+            <label for="exampleSelectBorder">Poli</label>
+            <select class="custom-select form-control-border" id="exampleSelectBorder">
+                <option>Anak</option>
+                <option>Gigi</option>
+                <option>Penyakit Dalam</option>
+            </select>
+        </div>
+      </div>
+
+      <div class="card-footer">
+        <button type="submit" class="btn btn-primary">Simpan</button>
+        <button type="submit" class="btn btn-primary">Reset</button>
+      </div>
+    </form>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
   
-  <?php include('../AdminLTE-3.2.0/template/footer.php'); ?>
+  <?php include('../app/template/footer.php'); ?>
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">

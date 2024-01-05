@@ -15,7 +15,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="../AdminLTE-3.2.0/dashboardAdmin.php" class="nav-link">
+            <a href="../app/dashboardAdmin.php" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Dashboard
@@ -24,7 +24,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="../AdminLTE-3.2.0/adminDokter.php" class="nav-link">
+            <a href="../app/adminDokter.php" class="nav-link">
               <i class="nav-icon fas fa-solid fa-user-doctor"></i>
               <p>
                 Dokter
@@ -33,7 +33,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="../AdminLTE-3.2.0/adminPasien.php" class="nav-link">
+            <a href="../app/adminPasien.php" class="nav-link">
               <i class="nav-icon fas fa-solid fa-user-injured"></i>
               <p>
                 Pasien
@@ -42,7 +42,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="../AdminLTE-3.2.0/adminPoli.php" class="nav-link">              
+            <a href="../app/adminPoli.php" class="nav-link">              
               <i class="nav-icon fas fa-hospital"></i>
               <p>
                 Poli
@@ -51,7 +51,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="../AdminLTE-3.2.0/adminObat.php" class="nav-link">
+            <a href="../app/adminObat.php" class="nav-link">
               <i class="nav-icon fas fa-pills"></i>
               <p>
                 Obat

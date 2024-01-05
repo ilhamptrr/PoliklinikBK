@@ -3,17 +3,17 @@
 <?php
   session_start();
 ?>
-<?php include('./../conf/config.php'); ?>
-<?php include('../AdminLTE-3.2.0/template/header.php'); ?>
+<?php include('../conf/config.php'); ?>
+<?php include('../app/template/header.php'); ?>
 
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 
   <!-- Preloader -->
-  <?php include('../AdminLTE-3.2.0/template/preloader.php'); ?>
+  <?php include('../app/template/preloader.php'); ?>
 
   <!-- Navbar -->
-  <?php include('../AdminLTE-3.2.0/template/navbar.php'); ?>
+  <?php include('../app/template/navbar.php'); ?>
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
@@ -111,7 +111,7 @@
   </div>
   <!-- /.content-wrapper -->
   
-  <?php include('../AdminLTE-3.2.0/template/footer.php'); ?>
+  <?php include('../app/template/footer.php'); ?>
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">

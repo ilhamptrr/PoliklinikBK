@@ -3,16 +3,16 @@
 <?php
   session_start();
 ?>
-<?php include('../AdminLTE-3.2.0/template/header.php'); ?>
+<?php include('../app/template/header.php'); ?>
 
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 
   <!-- Preloader -->
-  <?php include('../AdminLTE-3.2.0/template/preloader.php'); ?>
+  <?php include('../app/template/preloader.php'); ?>
 
   <!-- Navbar -->
-  <?php include('../AdminLTE-3.2.0/template/navbar.php'); ?>
+  <?php include('../app/template/navbar.php'); ?>
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
@@ -35,7 +35,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Daftar Periksa Pasien</h1>
+            <h1 class="m-0">Jadwal Periksa</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -54,7 +54,7 @@
   </div>
   <!-- /.content-wrapper -->
   
-  <?php include('../AdminLTE-3.2.0/template/footer.php'); ?>
+  <?php include('../app/template/footer.php'); ?>
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
