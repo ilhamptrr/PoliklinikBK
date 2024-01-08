@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <?php
     session_start();
     include('conf/config.php');
@@ -29,7 +30,20 @@
             $result_insert = mysqli_query($koneksi, $query_insert);
 
             if ($result_insert) {
-                $success_message = "Pendaftaran berhasil!";
+                // Ambil nomor antrian yang baru saja dibuat
+                $query_get_antrian = "SELECT no_antrian FROM daftar_poli WHERE id_pasien = '$id_pasien' AND id_jadwal = '$pilih_jadwal'";
+                $result_get_antrian = mysqli_query($koneksi, $query_get_antrian);
+
+                if ($result_get_antrian && mysqli_num_rows($result_get_antrian) > 0) {
+                    $row_antrian = mysqli_fetch_assoc($result_get_antrian);
+                    $no_antrian = $row_antrian['no_antrian'];
+
+                    // Tampilkan pesan sukses bersama nomor antrian
+                    $success_message = "Pendaftaran berhasil!<br>Nomor Antrian Anda adalah: $no_antrian";
+                } else {
+                    // Jika gagal mendapatkan nomor antrian, tampilkan pesan sukses tanpa nomor antrian
+                    $success_message = "Pendaftaran berhasil!";
+                }
             } else {
                 $error_message = "Gagal menambahkan data. Silakan coba lagi.";
             }

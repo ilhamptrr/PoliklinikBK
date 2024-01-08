@@ -1,21 +1,8 @@
-<div class="sidebar">
-      <!-- Sidebar user panel (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle border border-dark" alt="User Image">
-        </div>
-        <div class="info">
-          <a href="#" class="d-block"><?php echo $_SESSION['nama']; ?></a>
-        </div>
-      </div>
-
-      <!-- Sidebar Menu -->
-      <nav class="mt-2">
+    <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
+          <!-- Dokter | Dashboard -->
           <li class="nav-item">
-            <a href="../app/dashboardDokter.php" class="nav-link">
+            <a href="dashboard.php?page=dokter_dashboard" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Dashboard
@@ -23,8 +10,10 @@
               </p>
             </a>
           </li>
+
+          <!-- Dokter | Jadwal Periksa -->
           <li class="nav-item">
-            <a href="../app/dokterJadwalPeriksa.php" class="nav-link">
+            <a href="dashboard.php?page=dokter_jadwalPeriksa" class="nav-link">
               <i class="nav-icon fas fa-solid fa-clipboard-list"></i>
               <p>
                 Jadwal Periksa
@@ -32,8 +21,10 @@
               </p>
             </a>
           </li>
+
+          <!-- Dokter | Memeriksa Pasien -->
           <li class="nav-item">
-            <a href="../app/dokterPeriksaPasien.php" class="nav-link">
+            <a href="dashboard.php?page=dokter_periksaPasien" class="nav-link">
               <i class="nav-icon fas fa-light fa-stethoscope"></i>
               <p>
                 Memeriksa Pasien
@@ -41,8 +32,10 @@
               </p>
             </a>
           </li>
+
+          <!-- Dokter | Riwayat Pasien -->
           <li class="nav-item">
-            <a href="../app/dokterRiwayatPasien.php" class="nav-link">              
+            <a href="dashboard.php?page=dokter_riwayatPasien" class="nav-link">              
               <i class="nav-icon fas fa-solid fa-clipboard"></i>
               <p>
                 Riwayat Pasien
@@ -50,8 +43,10 @@
               </p>
             </a>
           </li>
+
+          <!-- Dokter | Profil -->
           <li class="nav-item">
-            <a href="../app/dokterProfil.php" class="nav-link">
+            <a href="dashboard.php?page=dokter_profil" class="nav-link">
               <i class="nav-icon fas fa-solid fa-user"></i>
               <p>
                 Profil
@@ -59,7 +54,16 @@
               </p>
             </a>
           </li>
+
+          <!-- Dokter | Logout -->
+          <li class="nav-item">
+            <a href="logout.php" class="nav-link text-red">
+              <i class="nav-icon fas fa-power-off"></i>
+              <p>
+                Logout
+              </p>
+            </a>
+          </li>
+
         </ul>
-      </nav>
-      <!-- /.sidebar-menu -->
-    </div>
+    </nav>

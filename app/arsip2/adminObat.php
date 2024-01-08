@@ -30,7 +30,6 @@
     mysqli_stmt_close($stmt);
   }
 ?>
-<?php include('../conf/config.php'); ?>
 <?php include('../app/template/header.php'); ?>
 
 <body class="hold-transition sidebar-mini layout-fixed">

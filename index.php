@@ -47,6 +47,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
   </div>
 </div>
 
+<div class="text-center fixed-bottom bg-light p-3">
+  <h5>Ilham Maulana Putra</h5>
+  <p>A11.2020.12642</p>
+</div>
+
 
 <!-- REQUIRED SCRIPTS -->
 
